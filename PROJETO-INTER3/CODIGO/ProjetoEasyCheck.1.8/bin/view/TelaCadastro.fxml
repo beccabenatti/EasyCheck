@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCadastroController">
+   <children>
+      <ComboBox fx:id="cbProduto" layoutX="29.0" layoutY="137.0" prefHeight="25.0" prefWidth="270.0" promptText="Selecione o produto:" />
+      <Label layoutX="21.0" layoutY="94.0" prefHeight="35.0" prefWidth="108.0" text="Descrição">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="94.0" text="Quantidade">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtQdt" alignment="CENTER_RIGHT" layoutX="347.0" layoutY="137.0" prefHeight="25.0" prefWidth="124.0" promptText="0" />
+      <Label layoutX="534.0" layoutY="94.0" text="Preço">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPreco" alignment="CENTER_RIGHT" layoutX="534.0" layoutY="137.0" prefHeight="25.0" prefWidth="59.0" promptText="0" />
+      <Label layoutX="504.0" layoutY="141.0" text="R$" />
+      <TableView fx:id="tableProdutos" layoutY="281.0" prefHeight="278.0" prefWidth="629.0">
+        <columns>
+          <TableColumn fx:id="colDesc" prefWidth="300.0" text="Descrição" />
+          <TableColumn fx:id="colQdt" minWidth="0.0" prefWidth="165.0" text="Quantidade" />
+          <TableColumn fx:id="colPrecoUni" minWidth="0.0" prefWidth="165.0" text="Preço Unitario" />
+        </columns>
+      </TableView>
+      <Button fx:id="btInserir" layoutX="47.0" layoutY="208.0" mnemonicParsing="false" onAction="#inserirProduto" prefHeight="35.0" prefWidth="77.0" text="Inserir" />
+      <Button fx:id="btExcluir" layoutX="154.0" layoutY="208.0" mnemonicParsing="false" onAction="#excluirProduto" prefHeight="35.0" prefWidth="77.0" text="Excluir" />
+      <Button fx:id="btFinalizar" layoutX="276.0" layoutY="573.0" mnemonicParsing="false" onAction="#finalizarRegistro" prefHeight="35.0" prefWidth="77.0" text="Finalizar" />
+      <Button fx:id="btAlterar" layoutX="261.0" layoutY="208.0" mnemonicParsing="false" onAction="#alterarProduto" prefHeight="35.0" prefWidth="77.0" text="Alterar" />
+   </children>
+</Pane>
